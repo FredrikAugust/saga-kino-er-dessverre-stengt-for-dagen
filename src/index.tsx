@@ -8,10 +8,9 @@ import { store } from "./store";
 
 import App from "./App";
 
-const Root: React.FC = () => (
+ReactDOM.render(
   <Provider store={store}>
     <App />
-  </Provider>
+  </Provider>,
+  document.getElementById("root")
 );
-
-ReactDOM.render(<Root />, document.getElementById("root"));
