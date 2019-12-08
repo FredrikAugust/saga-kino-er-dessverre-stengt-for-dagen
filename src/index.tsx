@@ -1,8 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import "./index.css";
+import { Provider } from "react-redux";
+
+import "./index.scss";
+import { store } from "./store";
 
 import App from "./App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const Root: React.FC = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+
+ReactDOM.render(<Root />, document.getElementById("root"));
